@@ -21,7 +21,7 @@ if (ocBox && vidIntro && vidLoop && vidWave) {
                 vidIntro.play();
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.1 });
 
     observer.observe(ocBox);
 
@@ -95,3 +95,38 @@ if (modal && modalVideo && interactiveVideos.length > 0) {
         }
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('apple-warning-popup');
+
+  if (!popup) return;
+
+  const isAppleDevice = () => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const platform = window.navigator.platform.toLowerCase();
+    
+    const isIOS = /iphone|ipad|ipod/.test(userAgent);
+    const isMac = /mac/.test(platform);
+    const isModernIPad = isMac && navigator.maxTouchPoints > 1;
+
+    return isIOS || isMac || isModernIPad;
+  };
+
+  if (isAppleDevice()) {
+    setTimeout(() => {
+      popup.classList.add('show');
+    }, 800);
+  }
+
+  popup.addEventListener('click', () => {
+    popup.classList.remove('show');
+  });
+
+  popup.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      popup.classList.remove('show');
+    }
+  });
+});

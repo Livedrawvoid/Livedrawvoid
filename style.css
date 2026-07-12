@@ -1,11 +1,15 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #4a3e3d;
     scroll-behavior: smooth;
-    background: url('background.avif') repeat;
     background-attachment: scroll; 
+    background-image: url('background.avif');
+    background-repeat: repeat; 
+    background-attachment: scrolled; 
+    background-size: auto; 
+    min-height: 135vh; 
+    position: relative;
+    margin: 0;
+    min-width: 200px;
 }
 
 .hero {
@@ -16,51 +20,59 @@ body {
     text-align: center;
 }
 
+.description-content {
+    color: #8c6a5e;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px; 
+    min-width: 400px;
+    width: 90%; 
+    word-wrap: break-word;
+}
+
+.header-card {
+    position: absolute;
+    z-index: -1;
+}
+
 .hero-content h1 {
     font-size: 2.5rem;
     color: #8c6a5e;
-    margin-bottom: 5px;
-    background: rgba(251, 247, 240, 0.85);
-    padding: 10px 20px;
+    margin-bottom: 30px;
     border-radius: 15px;
     display: inline-block;
 }
 
-.scroll-down {
-    background: rgba(251, 247, 240, 0.85);
-    padding: 5px 15px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.scroll-arrow {
-    font-size: 2rem;
-    margin-top: 20px;
-    animation: bounce 2s infinite;
-}
-
 .main-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
-.bottom-nav-card {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 20px;
-    margin-top: 40px;
-    width: fit-content;
-}
-
-.nav-section, .social-section {
+.nav-section {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     padding: 15px;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+
+.social-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 100px;
     flex-wrap: wrap;
 }
 
@@ -72,10 +84,11 @@ body {
 
 .oc-box {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     max-width: 90vw;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
+    margin-left: 100px;
 }
 
 .oc-box:hover {
@@ -84,7 +97,7 @@ body {
 
 .oc-video {
     position: absolute;
-    top: 0;
+    top: 100;
     left: 0;
     width: 100%;
     height: 100%;
@@ -104,7 +117,7 @@ body {
 }
 
 .btn-video {
-    width: 200px;
+    width: 160px;
     height: auto;
     border-radius: 15px;
     object-fit: contain;
@@ -112,11 +125,11 @@ body {
 }
 
 .btn-video.soc-btn {
-    width: 130px;
+    width: 100px;
 }
 
 .btn-video.nav-back {
-    width: 150px;
+    width: 100px;
 }
 
 .btn-video:hover {
@@ -130,16 +143,66 @@ body {
     flex-wrap: wrap;
 }
 
+.bottom-platform {
+   position: absolute;
+   bottom: 0; 
+   left: 0;        
+   width: 100%;             
+   z-index: -1;   
+   pointer-events: none;     
+   overflow: hidden;
+} 
+
+.bottom-platform img {
+   height: 100%;
+   object-fit: cover;   
+   object-position: center bottom;
+}
+
 .page-header {
     text-align: center;
-    padding: 60px 20px 40px;
-    background: rgba(251, 247, 240, 0.9);
+    margin-bottom: 150px;   
+}
+
+.top-platform {
+    position: absolute;
+    top: -30px; 
+    left: 0;        
+    width: 100%;             
+    z-index: -1;   
+    pointer-events: none;
+    transform: scaleY(-1);
+    overflow: hidden;
+}
+
+.tos-top-platform {
+    position: absolute;
+    top: -30px; 
+    left: 0;        
+    width: 100%;             
+    z-index: -1;   
+    pointer-events: none;
+    transform: scaleY(-1);
+    top: -250px;
+    overflow: hidden;
+}
+
+.top-platform img {
+   height: 100%;
+   object-fit: cover;   
+   object-position: center top;
+}
+
+.tos-platform img {
+   height: 100%;
+   object-fit: cover;   
+   object-position: center top;
 }
 
 .page-header h1 {
     font-size: 2.5rem;
     color: #8c6a5e;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -165,27 +228,35 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .tos-box ul {
-    line-height: 1.8;
+    line-height: 1.5;
     color: #4a3e3d;
+}
+.tos-box h2, h3, h4, h6 {
+    color: #8c6a5e;
+    margin-top: 50px;
 }
 
 .section-title {
     text-align: center;
     color: #8c6a5e;
     margin-bottom: 30px;
-    background: rgba(251, 247, 240, 0.85);
-    padding: 10px;
     border-radius: 10px;
-    display: inline-block;
+}
+
+.commission-status {
+    text-align: center;
+    color: #6b8c5e;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .price-grid-two {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
@@ -196,15 +267,12 @@ body {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
+    color: #8c6a5e;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s;
-}
-
-.price-card:hover {
-    transform: translateY(-5px);
 }
 
 .media-container {
@@ -220,14 +288,16 @@ body {
 
 .grid-emojis {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 2fr);
+    row-gap: 50px;
+    column-gap: 20px;
     justify-items: center;
+    margin-top: 40px;
 }
 
 .card-sticker {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 10px;
     background-color: #f5ebe0;
     object-fit: contain;
@@ -236,8 +306,8 @@ body {
 }
 
 .card-emoji {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     background-color: #f5ebe0;
     object-fit: contain;
@@ -309,28 +379,27 @@ body {
 }
 
 .gallery-social-promo {
+    position: relative;
     text-align: center;
-    margin-bottom: 50px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 200px;
 }
 
 .gallery-social-promo h2 {
+    position: relative;
     color: #8c6a5e;
-    margin-top: 0;
+    margin-top: 80px;
     margin-bottom: 25px;
 }
 
 .gallery-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .gallery-item {
-    width: 100%;
+    width: 200px;
     aspect-ratio: 1 / 1;
     border-radius: 15px;
     background-color: #f5ebe0;
@@ -347,6 +416,71 @@ body {
     position: relative;
 }
 
+
+.apple-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -150%); 
+  width: 320px;
+  height: 320px; 
+  background-image: url('path/to/your-frame.avif');
+  background-size: cover;
+  background-position: center;
+  background-color: #f4f4f4; 
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  border-radius: 16px; 
+  z-index: 9999;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              opacity 0.4s ease, 
+              visibility 0.4s;
+              
+  cursor: pointer; 
+}
+
+.apple-popup.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.apple-popup-content {
+  background: rgba(255, 255, 255, 0.85); 
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+  pointer-events: none; 
+}
+
+.apple-popup-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.apple-popup-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.dismiss-hint {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-10px); }
