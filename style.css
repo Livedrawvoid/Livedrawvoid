@@ -91,6 +91,12 @@ body {
     margin-left: 100px;
 }
 
+@media (hover: hover) {
+.oc-box:active,.oc-box:hover {
+    transform: scale(1.02);
+}
+}
+
 .oc-box:active {
     transform: scale(1.02);
 }
