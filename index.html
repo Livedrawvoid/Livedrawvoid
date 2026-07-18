@@ -1,87 +1,501 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiveDrawVoid commission page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    background-attachment: scroll; 
+    background-image: url('background.avif');
+    background-repeat: repeat; 
+    background-attachment: scrolled; 
+    background-size: auto; 
+    min-height: 135vh; 
+    position: relative;
+    margin: 0;
+    min-width: 200px;
+}
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hello! I'm LiveDrawVoid :3</h1>
-        </div>
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
 
-        <div class="header-card">
-            <img src="header.avif" class="header-img">
-        </div>
-    </section>
+.description-content {
+    color: #8c6a5e;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px; 
+    width: 90%; 
+    word-wrap: break-word;
+}
 
-    <section class="main-content">
-        <div class="oc-container">
-            <div id="oc-box" class="oc-box">
-                <video id="vid-intro" class="oc-video" muted playsinline><source src="intro.webm" type="video/webm"></video>
-                <video id="vid-loop" class="oc-video" muted playsinline><source src="loop.webm" type="video/webm"></video>
-                <video id="vid-wave" class="oc-video" muted playsinline><source src="wave.webm" type="video/webm"></video>
-            </div>
-        </div>
-                <div class="description-content">
-            <h2>hey there! You can call me Void, I'm a self-taught animator and artist and I make a lot of cool stuff.
+.header-card {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    max-width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
 
-                <br> Feel free to DM me!</h3>
-                </div>
-    </section>
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #8c6a5e;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    display: inline-block;
+}
 
-    <section class="bottom-platform">
-                <img src="cutoff.avif" class="btm-platform">
-    </section>
+.main-content {
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
-    </section>
-        <div class="bottom-nav-card">
-            <div class="nav-section">
+.nav-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
 
-                <a href="ToS&Prices.html" class="btn-video-link">
-                    <video autoplay loop muted playsinline class="btn-video"><source src="nav_tos.webm" type="video/webm"></video>
-                </a>
+.social-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
 
-                <a href="Gallery.html" class="btn-video-link">
-                    <video autoplay loop muted playsinline class="btn-video"><source src="nav_gallery.webm" type="video/webm"></video>
-                </a>
+.oc-container {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    max-width: 100%;
+}
 
-            </div>
-            <div class="social-section">
-                <div class="social-links">
-                    <a href="https://twitter.com/LiveDrawVoid" target="_blank" class="btn-video-link">
-                        <video autoplay loop muted playsinline class="btn-video soc-btn"><source src="nav_twitter.webm" type="video/webm"></video>
-                    </a>
-                    <a href="https://instagram.com/LiveDrawVoid_insta" target="_blank" class="btn-video-link">
-                        <video autoplay loop muted playsinline class="btn-video soc-btn"><source src="nav_instagram.webm" type="video/webm"></video>
-                    </a>
-                    <a href="https://discordapp.com/users/1151491898117214212/" target="_blank" class="btn-video-link">
-                        <video autoplay loop muted playsinline class="btn-video soc-btn"><source src="nav_discord.webm" type="video/webm"></video>
-                    </a>
-                    <a href="mailto:LiveDrawVoid@hotmail.com" class="btn-video-link">
-                        <video autoplay loop muted playsinline class="btn-video soc-btn"><source src="nav_email.webm" type="video/webm"></video>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+.oc-box {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    transition: transform 0.2s ease;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
 
-    <script src="script.js"></script>
-    
-<div id="apple-warning-popup" class="apple-popup" role="button" tabindex="0" aria-label="Dismiss warning">
-  <div class="apple-popup-content">
-    <h3>Apple Device Detected</h3>
+@media (hover: hover) {
+.oc-box:active,.oc-box:hover {
+    transform: scale(1.02);
+}
+}
 
-    <h5>You're most likely using an Apple/iOS device, I'm really sorry if the site is not working well and I 
-         reccomend checking from a non-Apple device.
-    </h5>
+.oc-box:active {
+    transform: scale(1.02);
+}
 
-    <a href="ToS&Prices.html" class="popup-hyperlink">Click here to check my Terms of service.</a>
-  </div>
-</div>
-    
-</body>
-</html>
+.oc-video {
+    position: absolute;
+    top: 100;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.oc-video.active {
+    opacity: 1;
+}
+
+.btn-video-link {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.btn-video {
+    width: 160px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.btn-video.soc-btn {
+    width: 100px;
+}
+
+.btn-video.nav-back {
+    width: 100px;
+}
+
+.btn-video:hover {
+    transform: scale(1.08);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bottom-platform {
+   position: absolute;
+   bottom: 0; 
+   left: 0;        
+   width: 100%;             
+   z-index: -1;   
+   pointer-events: none;     
+   overflow: hidden;
+} 
+
+.bottom-platform img {
+   height: 100%;
+   object-fit: cover;   
+   object-position: center bottom;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 150px;   
+}
+
+.top-platform {
+    position: absolute;
+    top: -30px; 
+    left: 0;        
+    width: 100%;             
+    z-index: -1;   
+    pointer-events: none;
+    transform: scaleY(-1);
+    overflow: hidden;
+}
+
+.tos-top-platform {
+    position: absolute;
+    top: -30px; 
+    left: 0;        
+    width: 100%;             
+    z-index: -1;   
+    pointer-events: none;
+    transform: scaleY(-1);
+    top: -250px;
+    overflow: hidden;
+}
+
+.top-platform img {
+   height: 100%;
+   object-fit: cover;   
+   object-position: center top;
+}
+
+.tos-platform img {
+   height: 100%;
+   object-fit: cover;   
+   object-position: center top;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #8c6a5e;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-emoji {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.content-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.tos-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 100px;
+}
+
+.tos-box ul {
+    line-height: 1.5;
+    color: #4a3e3d;
+}
+.tos-box h2, h3, h4, h6 {
+    color: #8c6a5e;
+    margin-top: 50px;
+}
+
+.section-title {
+    text-align: center;
+    color: #8c6a5e;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.commission-status {
+    text-align: center;
+    color: #6b8c5e;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.price-grid-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.price-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #8c6a5e;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.media-container {
+    margin-bottom: 25px;
+}
+
+.grid-stickers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.grid-emojis {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    row-gap: 50px;
+    column-gap: 20px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.card-sticker {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: #f5ebe0;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card-emoji {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #f5ebe0;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card-sticker:hover, .card-emoji:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    position: relative;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8c6a5e;
+    margin: 10px 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#modal-video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: transparent;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.active #modal-video {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.gallery-social-promo {
+    position: relative;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.gallery-social-promo h2 {
+    position: relative;
+    color: #8c6a5e;
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+
+.gallery-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    background-color: #f5ebe0;
+    object-fit: contain;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    z-index: 10;
+    position: relative;
+}
+
+
+.apple-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -150%); 
+  width: 350px;
+  height: 250px;
+  background-size: 100% 100%; 
+  background-image: url('warning.avif');
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+ visibility 0.4s;            
+  cursor: pointer; 
+}
+
+.apple-popup.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.apple-popup-content {
+  padding: 20px;
+  border-radius: 8px;
+  color: #bdafa6;
+  pointer-events: none; 
+}
+
+.apple-popup-content h3 {
+  color: #cc7878;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.apple-popup-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.popup-hyperlink {
+  pointer-events: auto;
+  color: #bdafa6;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-hyperlink:hover {
+  color: #cc7878; /* Darker blue on hover */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
