@@ -54,7 +54,17 @@ if (ocBox && vidIntro && vidLoop && vidWave) {
         canWave = true;
     });
 
+    ocBox.addEventListener('touchstart', () => {
+        isHovering = true;
+        canWave = true;
+    });
+    
+
     ocBox.addEventListener('mouseleave', () => {
+        isHovering = false;
+    });
+
+    ocBox.addEventListener('touchend', () => {
         isHovering = false;
     });
 }
