@@ -84,7 +84,7 @@ body {
 }
 
 .oc-container {
-    width: 500px;
+    width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +94,7 @@ body {
 
 .oc-box {
     position: relative;
-    width: 500px;
+    width: 700px;
     height: 500px;
     transition: transform 0.2s ease;
     display: block;
@@ -491,7 +491,7 @@ body {
 }
 
 .popup-hyperlink:hover {
-  color: #cc7878;
+  color: #cc7878; /* Darker blue on hover */
 }
 
 @keyframes bounce {
