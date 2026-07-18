@@ -491,7 +491,7 @@ body {
 }
 
 .popup-hyperlink:hover {
-  color: #cc7878; /* Darker blue on hover */
+  color: #cc7878;
 }
 
 @keyframes bounce {
