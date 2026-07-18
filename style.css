@@ -91,7 +91,7 @@ body {
     margin-left: 100px;
 }
 
-.oc-box:hover {
+.oc-box:active {
     transform: scale(1.02);
 }
 
