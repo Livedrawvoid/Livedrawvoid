@@ -151,7 +151,7 @@ body {
 }
 
 .btn-video.nav-back {
-    width: min(35vw, 160px);
+    width: min(30vw, 160px);
     height: auto;
 }
 
@@ -402,7 +402,7 @@ body {
 .gallery-social-promo {
     position: relative;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 140px;
 }
 
 .gallery-social-promo h2 {
