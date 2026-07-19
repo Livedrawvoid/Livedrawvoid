@@ -91,22 +91,24 @@ body {
 }
 
 .oc-container {
-    width: 1000px;
+    width: min(700px, 100vw);
     display: flex;
     justify-content: center;
     align-items: center;
     display: block;
-    max-width: 100%;
+    overflow: hidden;
 }
 
 .oc-box {
     position: relative;
-    width: 1000px;
+    width: min(700px, 100vw);
     height: 500px;
     transition: transform 0.2s ease;
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    overflow: hidden;
+    left: 50%;
+    translate: -50% 0;
 }
 
 @media (hover: hover) {
