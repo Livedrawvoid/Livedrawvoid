@@ -411,12 +411,14 @@ body {
 .gallery-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(35vw, 200px), 1fr));
     gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 .gallery-item {
-    width: 200px;
+    width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 15px;
     background-color: #f5ebe0;
@@ -451,8 +453,8 @@ body {
   padding: 20px;
   opacity: 0;
   visibility: hidden;
-  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
- visibility 0.4s;            
+  transition: transform 0.6s ease
+  visibility 0.4s;            
   cursor: pointer; 
 }
 
@@ -492,10 +494,4 @@ body {
 
 .popup-hyperlink:hover {
   color: #cc7878; /* Darker blue on hover */
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
 }
