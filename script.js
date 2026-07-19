@@ -4,8 +4,6 @@ const vidLoop = document.getElementById('vid-loop');
 const vidWave = document.getElementById('vid-wave');
 
 if (ocBox && vidIntro && vidLoop && vidWave) {
-    let hasPlayedIntro = false;
-    let isHovering = false;
     let canWave = false;
 
     function switchVideo(targetVideo) {
@@ -15,9 +13,9 @@ if (ocBox && vidIntro && vidLoop && vidWave) {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !hasPlayedIntro) {
-                hasPlayedIntro = true;
+            if (entry.isIntersecting) {
                 switchVideo(vidIntro);
+                vidIntro.currentTime = 0;
                 vidIntro.play();
             }
         });
@@ -32,7 +30,7 @@ if (ocBox && vidIntro && vidLoop && vidWave) {
     };
 
     vidLoop.onended = () => {
-        if (isHovering && canWave) {
+        if (canWave) {
             canWave = false;
             switchVideo(vidWave);
             vidWave.currentTime = 0;
@@ -50,24 +48,25 @@ if (ocBox && vidIntro && vidLoop && vidWave) {
     };
 
     ocBox.addEventListener('mouseenter', () => {
-        isHovering = true;
-        canWave = true;
+        if (!vidWave.classList.contains('active')) {
+            canWave = true;
+        }
     });
 
     ocBox.addEventListener('touchstart', () => {
-        isHovering = true;
-        canWave = true;
-    });
-    
-
-    ocBox.addEventListener('mouseleave', () => {
-        isHovering = false;
+        if (!vidWave.classList.contains('active')) {
+            canWave = true;
+        }
     });
 
-    ocBox.addEventListener('touchend', () => {
-        isHovering = false;
-    });
 }
+
+
+
+
+
+
+
 
 const modal = document.getElementById('video-modal');
 const modalVideo = document.getElementById('modal-video');
