@@ -246,6 +246,13 @@ body {
     justify-items: center;
 }
 
+.gallery-section {
+    margin: 0 auto;
+    justify-items: center;
+    padding: 40px;
+    max-width: 1000px;
+}
+
 .tos-box {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 30px;
@@ -431,6 +438,7 @@ margin-top: 10px;
 }
 
 .gallery-grid {
+    width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(35vw, 200px), 1fr));
