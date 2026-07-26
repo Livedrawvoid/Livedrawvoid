@@ -22,7 +22,8 @@ body {
   background-repeat: repeat;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  opacity: 70%;
+  background-size: min(400px, 80vw) min(400px, 80vw);
+  opacity: 60%;
   z-index: -1; 
   pointer-events: none; 
 }
@@ -39,7 +40,7 @@ body {
 }
 
 .description-content {
-    color: #8c6a5e;
+    color: #5e4833;
     height: 40vh;
     display: flex;
     justify-content: center;
