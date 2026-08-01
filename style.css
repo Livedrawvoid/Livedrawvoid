@@ -256,13 +256,12 @@ a {
 
 .tos-top-platform {
     position: absolute;
-    top: -30px; 
     left: 0;        
     width: 100%;             
     z-index: -1;   
     pointer-events: none;
     transform: scaleY(-1);
-    top: -250px;
+    top: -200px;
     overflow: hidden;
 }
 
@@ -295,7 +294,7 @@ a {
 .content-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 110px 20px;
     justify-items: center;
 }
 
