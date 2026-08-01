@@ -66,7 +66,7 @@ body {
 
 .hero-content h1 {
     font-size: 2.5rem;
-    color: #8c6a5e;
+    color: #a0623e;
     border-radius: 15px;
     margin-bottom: 30px;
     display: inline-block;
@@ -172,8 +172,8 @@ a {
 
 .tos-btn-video-link h2, .gallery-btn-video-link h2 {
    opacity: 0;
-   transition: ease 0.3s;
-   color: #8d5b2b;
+   transition: ease 0.25s;
+   color: #a0623e;
    text-align: center;
    font-size: min(10vw, 1.5em)
 }
@@ -274,7 +274,7 @@ a {
 
 .page-header h1 {
     font-size: min(6vw, 2.5rem);
-    color: #8c6a5e;
+    color: #a0623e;
     white-space: nowrap;
     margin-bottom: 50px;
     display: flex;
@@ -317,17 +317,25 @@ a {
 
 .tos-box li {
     margin-top: 15px;
-    color: #4e433a;
+    color: #6d4e41;
     font-size: min(4vw, 16px);
 }
+
+.tos-box a {
+    text-decoration: underline;
+    margin-top: 15px;
+    color: #c07449;
+    font-size: min(4vw, 16px);
+}
+
 .tos-box h2, h3, h4, h6 {
-    color: #8c6a5e;
+    color: #a0623e;
     margin-top: 50px;
 }
 
 .section-title {
     text-align: center;
-    color: #8c6a5e;
+    color: #a0623e;
     margin-bottom: 30px;
     border-radius: 10px;
 }
@@ -362,7 +370,7 @@ a {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    color: #8c6a5e;
+    color: #a0623e;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     justify-content: center;
     transition: transform 0.2s;
@@ -424,7 +432,7 @@ margin-top: 10px;
 .price-tag {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #8c6a5e;
+    color: #a0623e;
     margin: 10px 0;
 }
 
@@ -486,7 +494,7 @@ margin-top: 10px;
 
 .gallery-social-promo h2 {
     position: relative;
-    color: #8c6a5e;
+    color: #a0623e;
     margin-bottom: 25px;
 }
 
